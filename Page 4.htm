@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <title>Travels in Paris - Trips from Paris</title>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -127,15 +132,103 @@
             border: #e88a60 1px solid;
         }
 
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            font-style: italic;
+            color: #e88a60;
+            margin-left: 50px;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            font-style: italic;
+            color: #5291df;
+            margin-left: 100px;
+        }
+
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #e88a60;
+            margin-left: 120px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 130px;
+            color: whitesmoke;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+
+        #intro {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 125px;
+            font-size: 22px;
+            color: whitesmoke;
+            text-align: center;
+            margin-left: 0;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        .beauty {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-right: 50px;
+            padding-left: 50px;
+            font-style: italic;
+            text-align: center;
+            font-size: 14px;
+            margin-left: 0;
+            color: #e88a60;
+        }
+
+        .czech {
+            margin-left: 125px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding-right: 50px;
+            padding-left: 50px;
+
+        }
+
+        table {
+            background-color: #5291df;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            border: 1px #5291df solid;
+            display: inline-block;
+            margin: auto;
+            margin-left: 550px;
+        }
+
+        td {
+            border: 1px #5291df solid;
+        }
+
+        th {
+            background-color: #2b335c;
+            text-transform: uppercase;
+            color: whitesmoke;
+        }
+
+        video {
+            margin: auto;
+            margin-left: 570px;
+        }
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
             color: #e88a60;
             display: block;
             padding: 3px 8.8px 0;
-            border-right: #e88a60 solid 0.5px;
         }
 
         .link-color:last-child {
@@ -143,14 +236,23 @@
         }
 
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
+        }
+        .footer-format:hover,
+        .link-color:hover {
+            color:#5291df;
+        }
+
+        img {
+            margin: auto;
+            margin-left: 580px;
+            width: 500px;
         }
     </style>
 </head>
@@ -180,274 +282,97 @@
             </div>
     </header>
     <div>
-        <p> Europe is great for traveling. Booking cheap flights and train tickets is extremely possible.
-            There are many great cities and places one can easily visit when in Paris, the list can go on forever.
-            I had the chance of traveling to three different cities during my time abroad, Prague, Amsterdam, and Milan.
-            And will share my travel guides for these cities with you.
+        <p id="intro"> Europe is great for traveling. Booking cheap flights and train tickets is extremely possible.
+            There are many great cities and places one can easily visit when in Paris, the list could go on forever.
+            I had the chance of traveling to different cities during my time abroad, however, Prague and Milan were my
+            favorites and I will share my travel tips for these cities with you.
         </p>
-        <h1>Prague</h1>
-        <img src="Images/prague.jpg" title="Prague Landscape" alt="Picture of Prague">
-        <h2>Where to Stay</h2>
-        <p>So there are three good places to stay in Prague and they all surround Old Town. Old town is where everything
-            nightlife related really goes down in the city and probably where you will spend most of your time since
-            you’re there for just a weekend.
-            You ideally want to be located close to a subway stop. </p>
-        <h2>How to Get Around</h2>
-        <p>I really recommend using public transport in Prague. The metro and tram system are both extremely easy to use
-            and can get you anywhere you need in Prague. I recommend buying a 3 day pass for about $10. You buy them at
-            Metro stations or at some major tram locations.
-            Below is a map of the metro system in Prague. You’ll probably be staying around the stops circled in
-            blue.However, Prague is not extremely big and you can walk places or Uber if you want. UberPop is what it’s
-            called through the app and is cheaper than everywhere else in Europe.</p>
-        <h2>Where to Eat</h2>
-        The food in Prague is amazing if you go to the right places. Very fair prices just about everywhere you go. You
+
+        <h1>Milan</h1>
+        <div>
+            <video height="300" controls muted>
+                <source src="Images/milano.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="beauty">A brief timelapse of Milan</p>
+        <table>
+            <tr>
+                <th>Sightseeing</th>
+                <th>Shopping</th>
+                <th>Restaurants</th>
+                <th>Bars</th>
+            </tr>
+            <tr>
+                <td>Il Duomo</td>
+                <td>Via Torino</td>
+                <td>Da Zero</td>
+                <td>Frank's</td>
+            </tr>
+            <tr>
+                <td>Brera</td>
+                <td>Quadrilatero della Moda</td>
+                <td>Pizzam</td>
+                <td>Woodbar</td>
+            </tr>
+            <tr>
+                <td>Parco Sempione</td>
+                <td>Via della Spiga</td>
+                <td>Cacio e Pepe</td>
+                <td>La Chiesetta</td>
+            </tr>
+            <tr>
+                <td>I Navigli</td>
+                <td>Piazza Gae Aulenti</td>
+                <td>Ufficina 12</td>
+                <td>Speakeasy 1930</td>
+            </tr>
+            <tr>
+                <td>City Life</td>
+                <td>Il Centro</td>
+                <td>Maravea</td>
+                <td>Backdoor 43</td>
+            </tr>
+            <tr>
+                <td>Fondazione Prada</td>
+                <td>Il Duomo</td>
+                <td>Mi Scusi</td>
+                <td>Nottingham Forest</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <h1>Prague</h1>
+    <div>
+        <video height="300" controls muted>
+            <source src="Images/praguevid.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p class="beauty">A brief timelapse of Prague</p>
+    <h2>Where to Stay</h2>
+    <p class="czech">So there are three good places to stay in Prague and they all surround Old Town. Old town is where
+        everything
+        nightlife related really goes down in the city and probably where you will spend most of your time since
+        you’re there for just a weekend.<br>
+        You ideally want to be located close to a subway stop. </p>
+    <h2>How to Get Around</h2>
+    <p class="czech">I really recommend using public transport in Prague. The metro and tram system are both extremely
+        easy to use
+        and can get you anywhere you need in Prague. I recommend buying a 3 day pass for about $10. You buy them at
+        Metro stations or at some major tram locations.<br>
+        Prague is not extremely big and you can walk places or Uber if you want. UberPop is what it’s
+        called through the app and is cheaper than everywhere else in Europe.</p>
+    <h2>Where to Eat</h2>
+    <p class="czech">The food in Prague is amazing if you go to the right places. Very fair prices just about everywhere
+        you go.
+        You
         also need to know that Czech cuisine is mostly meat and potatoes, but some of the best meat and potatoes you
         will ever have. You don’t have to eat Czech food unless you want it, but some of the better dishes are pork
-        knuckle, schnitzel, svickova, among others.
-
-        <!-- Will instert all the places to go to -->
-        <hr>
-        <h1>Milan</h1>
-        <h2>To shop:</h2>
-
-        Duomo
-
-        Via Torino
-
-        Quadrilatero della Moda (which includes the two below)
-
-        Via della Spiga
-
-        Via Monte Napoleone
-
-        City Life shopping district
-
-        Piazza Gae Aulenti
-
-        Il Centro (shopping mall in Arese largest mall in Europe)
-
-
-
-        <h2>To eat:</h2>
-
-        Best of the best:
-
-        Milan restaurants
-
-
-
-        Pizza:
-
-        (Neoplitan pizza)
-
-        Da zero - reservation required
-
-        Starita —> nodini di pizza con nutella (great nutella dessert)
-
-
-
-        Thin pizza:
-
-        piz - ask how much time to wait
-
-        Pizzam
-
-
-
-        Pizza fritta/ fried pizza:
-
-        Zia Esterina sorbillo —> fast food to go
-
-        Da Luini —> best panzerotti
-
-
-
-        Pasta places:
-
-        Puglia in brera area
-
-        Ravioli
-
-        Felice a testaccio
-
-        Cacio e pepe
-
-        Mi scusi
-
-        Maravea —> make your own pasta sauce and toppings
-
-
-
-        Risotto:
-
-        Ufficina 12
-
-        Trattoria milanese (typical Milanese food)
-
-
-
-
-
-        Obica (best burrata)
-
-
-
-        <h3>Aperitivo:</h3>
-
-        Terrazza aperol
-
-        Radio rooftop
-
-        Farini (pizza and bread)
-
-
-
-        Backdoor 43 — bar
-
-
-
-
-
-        A vucciria - fried fast food and cannolis
-
-
-
-        <h3>Gelato/desserts:</h3>
-
-        Casa infante (sfogliatelle and best pistachio cream)
-
-        Cioccolati italiani
-
-        Princi
-
-        Pannarello
-
-        Moscova (cannoli)
-
-        Ufficina del gelato
-
-        Rosso pomodoro
-
-
-
-        <h3>Normal price range:</h3>
-
-        any restaurant in the Brera area the majority are good!
-
-        Luini (best panzerotti in Milan)
-
-        Spontini for pizza
-
-        Riad
-
-        Macha - kind of Japanese
-
-        Fancytoast
-
-        Canteen - Mexican food and tequila bar
-
-        Bento - Japanese
-
-        T’a Milano — bakery/cafe
-
-        Soul green
-
-        Bar Luce
-
-        Lentini’s
-
-
-
-        <h3>Bit more classy and expensive:</h3>
-
-        Il salumaio di Montenapoleone
-
-        Carlo e Camilla
-
-        MIO (Park Hyatt)
-
-        Ristorante Berton (Viale della Liberazione 13)
-
-        Al Grissino (via Giovanni Battista Tiepolo 54)
-
-        Il Luogo di Aimo e Nadia (Via Privata Raimondo Montecuccoli 6)
-
-        Giacomo (Via Pasquale Sottocorno 6)
-
-        La Veranda (Four Seasons, Via Gesù 6/8)
-
-        Sadler (Via Ascanio Sforza 77)
-
-        Contraste (Via Meda 2 - A lot about design)
-
-        Da Felice
-
-        Osteria Tajoli
-
-
-
-        <h2>To drink (bars/pubs):</h2>
-
-        Frank’s - Porta Venezia
-
-        Woodbar
-
-        If you want a nice aperitivo then go to the rooftop of La Rinascente (nice view of the Duomo)
-
-        Aperol Spritz Terrace (even better vibe and view of Duomo)
-
-        La Chiesetta — used to be an actual church and now it’s a small bar
-
-        Nottingham Forest
-
-        The botanical club
-
-        Terrazza 12
-
-        Ceresio 7
-
-        Pinch Spirits & Kitchen
-
-        Mag Cafe
-
-        Gin 012 — great for an aperitivo
-
-        Speakeasy 1930
-
-        Backdoor 43 (smallest bar in the world)
-
-        Trattoria Toscana
-
-
-
-
-        <h2>To visit:</h2>
-
-        Il Duomo
-
-        Brera
-
-        Castello Sforzesco
-
-        Parco Sempione
-
-        I Navigli
-
-        City Life (newest part of Milan)
-
-        Bunch of museums
-
-        Go to Darsena di Milano to hang there on a nice day
-
-        Fondazione Prada
-
-        <hr>
-        <h1 id="amsterdam">Amsterdam</h1>
-    </div>
+        knuckle, schnitzel, svickova, among others.</p>
     <hr>
     <footer>
         <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
         <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+        <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
     </footer>
 </body>
 

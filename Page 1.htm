@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <title>Travels in Paris - Studying Abroad with Babson</title>
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -91,7 +94,8 @@
         a {
             cursor: pointer;
             text-decoration: none;
-            color: whitesmoke;
+            color: #e88a60;
+            font-weight: bold;
         }
 
         .navigation-style-nohover:hover,
@@ -131,8 +135,47 @@
             border: #e88a60 1px solid;
         }
 
+        #babson:hover {
+            color: #5291df;
+        }
+
+        img {
+            margin: auto;
+            margin-left: 750px;
+        }
+
+        #more {
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        ol {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            color: whitesmoke;
+            margin-left: 50px;
+        }
+
+        h2 {
+            color: whitesmoke;
+            font-size: 20px;
+            text-decoration: underline;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+        }
+
+        #small {
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
@@ -147,16 +190,51 @@
         }
 
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
+        }
+
+        .footer-format:hover,
+        .link-color:hover {
+            color: #5291df;
+        }
+
+        #warning {
+            font-style: italic;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 50px;
+            padding-right: 50px;
         }
     </style>
+    <script>
+        function change(x) {
+            document.getElementById("picture").src = "Images/HEC_paris.jpg";
+        }
+
+        function back(x) {
+            document.getElementById("picture").src = "Images/babson-logo.png";
+        }
+        $(function () {
+            $("h2").click(function () {
+                $("li").css("color", "yellow");
+
+            });
+            $("h2").dblclick(function () {
+                $("li").css("color", "whitesmoke");
+
+            })
+
+
+        });
+
+        // Added some more jQuery to change the color of the text
+    </script>
 </head>
 
 <body>
@@ -184,21 +262,40 @@
             </div>
     </header>
     <div>
-        <p>To travel abroad, Babson requires you to submit the application a semester prior to your preferred departure
-            date. For example, if you want to travel in the Spring then you must submit the application in the Fall, and
-            if you want to travel in the Fall then you must submit the application in the Spring the semester prior.
-            However, before submitting the application, Babson requires you to go through a Study Abroad 101 orientation
-            to understand
-            the different programs they offer and the different types of studying abroad. </p>
-        <p>
-            <a href="https://www.babson.edu/student-life/global/glavin-office-of-multicultural--international-education/education-abroad/undergraduate-students/academic-year-and-semester-abroad/"
-                target="_blank">Step-by-Step Guide to Studying Abroad with Babson</a>
+        <br>
+        <img onmouseover="change(this.id)" onmouseout="back(this.id)" src="Images/babson-logo.png" id="picture"
+            height="100px" title="babson logo" alt="Mouse over the image to see the HEC logo">
+
+        <!-- The image changes onmouseover and onmouseout -->
+
+        <h2>Studying Abroad Step by Step Guide</h2>
+        <p id="small">Here you will find the very generic Steps by Studying Abroad at Babson, by clicking the link below
+            it will redirect you to a page with more information.</p>
+        <ol>
+            <li>Attend Babson Abroad 101</li>
+            <li>Research Programs</li>
+            <li>Advising and Goals Questionnaire</li>
+            <li>Meet with an Education Abroad Advisor</li>
+            <li>Program Declaration</li>
+        </ol>
+        <p id="more">
+            <a id="babson"
+                href="https://www.babson.edu/student-life/global/glavin-office-of-multicultural--international-education/education-abroad/undergraduate-students/academic-year-and-semester-abroad/"
+                target="_blank">Click here for more information</a>
         </p>
+        <p id="warning"><strong>KEEP IN MIND:</strong> To travel abroad, Babson requires you to submit the application a
+            semester prior to your
+            preferred departure date. For example, if you want to travel in the Spring then you must submit the
+            application in the Fall, and
+            if you want to travel in the Fall then you must submit the application in the Spring the semester prior.
+        </p>
+
     </div>
     <hr>
     <footer>
         <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
         <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+        <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
     </footer>
 </body>
 

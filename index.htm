@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Travels In Paris</title>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -155,32 +162,74 @@
             color: white;
         }
 
-        .subtitle {
+        #subtitle {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 24px;
+            font-size: 30px;
             font-style: italic;
             color: #e88a60;
             font-weight: bolder;
             text-align: center;
+            margin-left: 650px;
+            margin-right: 650px;
         }
 
         p {
             color: white;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        #intro {
+            margin: auto;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+        }
+
+        .card-text {
+            color: #5291df;
+            font-size: 14px;
+        }
+
+        #tip {
+            color: #5291df;
+        }
+
+        .card-title {
+            text-align: center;
+            color: #2b335c;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
         }
 
         hr {
             border: #e88a60 1px solid;
         }
 
+        h4 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            font-style: italic;
+            color: #e88a60;
+            margin-left: 100px;
+        }
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
             color: #e88a60;
             display: block;
             padding: 3px 8.8px 0;
-            border-right: #e88a60 solid 0.5px;
+        }
+
+        .footer-format:hover,
+        .link-color:hover {
+            color:#5291df;
         }
 
         .link-color:last-child {
@@ -188,16 +237,35 @@
         }
 
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
         }
     </style>
+    <script>
+        function travel(x) {
+            let r = document.getElementById("subtitle");
+            r.innerHTML = "The Ultimate Travel Guide!";
+        }
+
+        function paris(x) {
+            let h = document.getElementById("subtitle");
+            h.innerHTML = "Welcome to Paris!"
+
+        }
+
+        function colors(x) {
+            x = document.getElementById("subtitle").style.color = "whitesmoke";
+        }
+
+        function back(x) {
+            y = document.getElementById("subtitle").style.color = "#e88a60";
+        }
+    </script>
 </head>
 
 <body>
@@ -230,24 +298,68 @@
             <button><a href="#Start">Explore More</a></button>
         </div>
     </div>
+    <br>
     <div>
         <a id="Start"></a>
-        <p class="subtitle">The ultimate travel guide to studying abroad in Paris!</p>
+        <p onmouseover="travel(this.id)" onmouseout="paris(this.id)" onclick="colors(this.id)"
+            ondblclick="back(this.id)" id="subtitle">Welcome to
+            Paris!</p>
+        <!-- Text changes on mouseover and goes back to the original text on mouseout -->
+        <!-- Style also changes when the title is clicked on and when it is doubleclicked it will go back to the original color -->
         <br>
-        <p>Here you can find all information related to Babson and studying abroad, particularly at the HEC Paris
-            exchange program.
-            You can find a step-by-step explaining the process of studying abroad with Babson. Alongside Parisian travel
-            guides and more cities to explore during your time abroad!</p>
-
+        <p id="intro">Here you can find all information related to Babson and studying abroad, particularly at the HEC
+            Paris exchange program. You can find a step-by-step explaining the process of studying abroad with Babson.
+            <br> Alongside Parisian travel guides and more cities to explore during your time abroad! <br>
+            <p id="tip"><strong>From classy restaurants to hipster speakeasies and top class architecture Travels in
+                    Paris has everything!</strong></p>
+        </p>
     </div>
-    <div>
-        <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" 
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/9416564&color=%232b335c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <br>
+    <h4>A glimpse into what Paris has to offer...</h4>
+    <div class="container">
+        <div class="card-deck">
+            <div class="card">
+                <img src="Images/mont.JPG" class="card-img-top" alt="montmartre">
+                <div class="card-body">
+                    <h5 class="card-title">Montmartre<i class="fas fa-utensils"></i></h5>
+                    <p class="card-text">An artist's village, Montmartre is a unique village on an extremely famous hill
+                        right in Paris. With numerous street artists and the beautiful Basicila of Sacre-Coeur, opened
+                        in 1914, this location is a must for tourists. It also has the best view of all of Paris.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/louvre.JPG" class="card-img-top" alt="louvre">
+                <div class="card-body">
+                    <h5 class="card-title">Musée du Louvre</h5>
+                    <p class="card-text">Hosting the famous painting of the Mona Lisa, the Louvre is one of the most
+                        prestigious and largest art museums in the world, conating over 380,000 objects and 35,000 works
+                        of art. The architecture alone is one worth seeing from the outside with its two iconic glass
+                        pyramids.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Images/arc2.JPG" class="card-img-top" alt="arc">
+                <div class="card-body">
+                    <h5 class="card-title">Arc de Triomphe</h5>
+                    <p class="card-text">One of the most famous monuments in Paris right at the end of Champs-Elysees.
+                        The arch stands as a powerful, unified symbol for France. All the names of the generals and wars
+                        fought can be found engraved on the inside. The rooftop gives one of the best views of Paris
+                        right from the center of the city.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <hr>
     <footer>
         <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
         <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+        <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
+        <div>
+            <iframe width="25%" height="50" scrolling="no" frameborder="no" allow="autoplay" controls="false"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/9416564&color=%232b335c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
     </footer>
 </body>
 

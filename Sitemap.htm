@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Site Map</title>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -118,12 +123,49 @@
         .menu-style:hover {
             color: #5291df;
         }
+
+        #honor {
+            font-style: italic;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: #e88a60;
+            text-align: center;
+        }
+
+        .more {
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: whitesmoke;
+        }
+
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            color: whitesmoke;
+            margin-left: 50px;
+        }
+
         hr {
             border: #e88a60 1px solid;
         }
 
+        a.site:hover{
+            color:#5291df;
+            text-decoration: underline;
+        }
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
@@ -136,16 +178,19 @@
         .link-color:last-child {
             border-right: none;
         }
+        .footer-format:hover,
+        .link-color:hover {
+            color:#5291df;
+        }
 
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -174,35 +219,44 @@
                 </div>
             </div>
     </header>
-    <h2>Travels In Paris Site Map</h2>
-    <hr>
+    <h1>Travels In Paris Site Map</h1>
     <div>
-        <h3><a href="index.htm">Home Page</a></h3>
+        <h3><a class="site" href="index.htm">Home Page</a></h3>
     </div>
     <div>
-        <h3><a href="Page 1.htm"> Studying Abroad with Babson</a></h3>
+        <h3><a class="site" href="Page 1.htm"> Studying Abroad with Babson</a></h3>
     </div>
     <div>
-        <h3><a href="Page 2.htm"> HEC Paris </a></h3>
-        <a href="Page 2.htm">Where to Live</a><br>
-        <a href="Page 2.htm">Transportation</a>
+        <h3><a class="site" href="Page 2.htm"> HEC Paris </a></h3>
+        <p class="more">
+            <a class="site" href="Page 2.htm">Where to Live</a><br>
+            <a class="site" href="Page 2.htm">Transportation</a>
+        </p>
     </div>
     <div>
-        <h3><a href="Page 3.htm">Paris Travel Guide </a></h3>
-        <a href="Page 3.htm">Where to Eat</a><br>
-        <a href="Page 3.htm">Where to Go Out</a><br>
-        <a href="Page 3.htm">What to Visit</a>
+        <h3><a class="site" href="Page 3.htm">Paris Travel Guide </a></h3>
+        <p class="more">
+            <a class="site" href="Page 3.htm">Where to Eat</a><br>
+            <a class="site" href="Page 3.htm">Where to Go Out</a><br>
+            <a class="site" href="Page 3.htm">What to Visit</a>
+        </p>
     </div>
     <div>
-        <h3><a href="Page 4.htm">Trips from Paris</a></h3>
-        <a href="Page 4.htm">Amsterdam</a><br>
-        <a href="Page 4.htm">Prague</a><br>
-        <a href="Page 4.htm">Milan</a>
+        <h3><a class="site" href="Page 4.htm">Trips from Paris</a></h3>
+        <p class="more">
+            <a class="site" href="Page 4.htm">Prague</a><br>
+            <a class="site" href="Page 4.htm">Milan</a>
+        </p>
     </div>
+    <p id="honor">I, Yara El Madalla, pledge my honor that I have neither received nor provided unauthorized assistance
+        during the
+        completion of this work. I have read the term project instructions and observed all the restrictions and
+        limitations specified therein.</p>
     <hr>
     <footer>
         <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
         <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+        <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
     </footer>
 </body>
 

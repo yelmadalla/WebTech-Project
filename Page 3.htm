@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <title>Travels in Paris - Paris Travel Guide</title>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -127,8 +132,88 @@
             border: #e88a60 1px solid;
         }
 
+        table {
+            background-color: #5291df;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            border: 1px #5291df solid;
+            display: inline-block;
+            margin-left: 170px;
+        }
+
+        td {
+            border: 1px #5291df solid;
+        }
+
+        th {
+            background-color: #2b335c;
+            text-transform: uppercase;
+            color: whitesmoke;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        .des {
+            display: inline-block;
+            margin-left: 350px;
+            margin-right: 50px;
+            top: -200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        #desc {
+            display: inline-block;
+            margin-left: 350px;
+            margin-right: 50px;
+            top: -200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+
+        }
+
+        #tour {
+            margin-top: 200px;
+        }
+
+        iframe {
+            margin-left: 870px;
+        }
+
+        #map {
+            display: inline-block;
+            position: relative;
+            top: -350px;
+        }
+
+        img {
+            margin-left: 50px;
+            border-width: 5px;
+            border-style: solid;
+            display: inline-block;
+            position: absolute;
+        }
+
+        #description {
+            margin-left: 50px;
+            position: absolute;
+            top: 725px;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            font-style: italic;
+            color: #e88a60;
+            margin-left: 50px;
+        }
+       
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
@@ -137,25 +222,65 @@
             padding: 3px 8.8px 0;
             border-right: #e88a60 solid 0.5px;
         }
+        .footer-format:hover,
+        .link-color:hover {
+            color:#5291df;
+        }
 
         .link-color:last-child {
             border-right: none;
         }
 
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
         }
     </style>
+    <script type="text/javascript">
+        const slides = [
+            "Images/cafe.jpg",
+            "Images/eiffel2.jpg",
+            "Images/entrecote.jpg",
+            "Images/salmon.jpg",
+            "Images/toast.jpg",
+            "Images/mont.jpg",
+            "Images/interior.jpg",
+            "Images/crepes.jpg"
+        ];
+
+        const descriptionList = [
+            "Brunch at Cafe Oberkampf",
+            "Eiffel tower at night",
+            "Dinner at Relais de L'entrecote",
+            "Brunch at Maison Sauvage",
+            "Brunch at Maison Sauvage",
+            "Sacre-Coeur",
+            "Inside the Louvre",
+            "Famous French crepes",
+        ];
+
+        let i = 0;
+
+        function slideShow() {
+            let parisImage = document.getElementById("paris-img");
+            if (i == slides.length) {
+                i = 0;
+            }
+            parisImage.src = slides[i];
+            document.getElementById("description").innerHTML = descriptionList[i];
+            i++;
+            setTimeout("slideShow()", 2500);
+
+        }
+    </script>
 </head>
 
-<body>
+<body onload="slideShow()">
     <header class="style">
         <div class="header">
             <h1><a class="title" href="index.htm" title="TIP">Travels In Paris</a></h1>
@@ -180,125 +305,108 @@
             </div>
     </header>
     <div>
-        A brief look at the beauty of Paris:<br>
-        <video height="300" controls muted>
-            <source src="Images/Colors of Paris - 4K Timelapse.mp4" type="video/mp4">
-        </video>
+        <p id="slide">
+            <img src="Images/arc2.JPG" alt="Slideshow of Paris" title="Paris" id="paris-img" height="400px" />
+            <!-- I have the slideshow -->
+        </p>
+        <p id="description">Arc de Triomphe</p>
+
+        <h2 id="desc">Sights and Bites in Paris</h2>
+        <p class="des">Paris is one of the top cities in the world that hosts the most tourists per year. Offering many
+            places to
+            visit from the beautiful architecture in Museums to the glamorous cafes and restuarants. One can never tire
+            of what this city has to offer!
+        </p>
+        <p class="des">Below is a brief list of the go-to places if you're staying in Paris for 1 week. A map is
+            included
+            below to
+            visualize and ease the transportation from place to place.</p>
+
+        <p class="des">From brunch places to nightclubs the list has them all!</p>
     </div>
 
-    <p>
-        <h3>Places to visit:</h3>
+    <br>
+    <div id="tour">
+        <table>
+            <tr>
+                <th>Sightseeing</th>
+                <th>Restaurants</th>
+                <th>Speakeasies</th>
+                <th>Nightlife</th>
+            </tr>
+            <tr>
+                <td>Musée d’Orsay</td>
+                <td>Le Relais de L'Entrecote</td>
+                <td>Mabel</td>
+                <td>l'Arc Paris</td>
+            </tr>
+            <tr>
+                <td>Eiffel Tower</td>
+                <td>Il Etait Un Square</td>
+                <td>No Entry</td>
+                <td>VIP ROOM</td>
+            </tr>
+            <tr>
+                <td>Musée du Louvre</td>
+                <td>Carette</td>
+                <td>Gentlemen 1919</td>
+                <td>Le Cavern Club</td>
+            </tr>
+            <tr>
+                <td>Notre Dame</td>
+                <td>Maison Sauvage</td>
+                <td>Le Syndicat</td>
+                <td>Rue de Bastille</td>
+            </tr>
+            <tr>
+                <td>Musée de l’Orangerie</td>
+                <td>Pizzeria Popolare</td>
+                <td>Candelaria</td>
+                <td>Niki Bar</td>
+            </tr>
+            <tr>
+                <td>Champs Elysées</td>
+                <td>Pink Mamma</td>
+                <td>Mezcaleria</td>
+                <td>Silencio</td>
+            </tr>
+            <tr>
+                <td>Les Catacombes</td>
+                <td>Hotel Costes</td>
+                <td>Secret 8 by Buddha Bar</td>
+                <td>La Machine du Moulin Rouge</td>
+            </tr>
+            <tr>
+                <td>Arc de Triomphe</td>
+                <td>Le Basilic</td>
+                <td>Hammam Bar</td>
+                <td>Aquarium de Paris</td>
+            </tr>
+            <tr>
+                <td>Musée YSL</td>
+                <td>Le Golfe de Naples</td>
+                <td>Little Red Door</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Fondation Louis Vuitton</td>
+                <td>Nobu</td>
+                <td>Lavomatic</td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1mu-Jo4oZywctYIz77U-yXqn2njBFQInL" width="640"
+            height="480"></iframe>
+    </div>
 
-        Musée d’Orsay
-
-        Musée de l’Orangerie
-
-        Les Catacombes
-
-        Eiffel Tower (ofc)
-
-        Louvre
-
-        Champs Elysées
-
-        Arc de Triomphe
-
-        Notre Dame
-
-        Musee YSL
-
-        Fondation Louis Vuitton
-
-        <h3> To eat:</h3>
-
-        Le relais de l’entrecôte —> only has entrecôte and fries in their menu fixed cost of 26€ and you get two
-        portions
-
-        Il était un square —> known for its burgers (you have to reserve)
-
-
-        <h3>To go out:</h3>
-
-        Bastille/Rue de Lappe (street with a mix of bars and clubs)
-
-        Treplay
-
-        Niki Bar
-
-        Balajo
-
-        La Machine de Moulin Rouge
-
-        Concrete
-
-        Wanderlust (Art school that transforms into a two level club)
-
-        Rex Club (this is a cinema with an underground bar)
-
-        VIP Room
-
-        Silencio
-
-        38 Riv (Underground jazz)
-
-        Le Baron Paris
-
-        L’Arc Paris
-
-        Whisper Club Paris
-
-
-        <h3>Bars:</h3>
-
-        Little red door (nominated one of the best bars in the world)
-
-        Le Sully
-
-        Rue Oberkampf (anywhere on this street)
-
-        Rue mouffetard/place de la contrescarpe (anywhere on this street)
-
-        Rue de la huchette
-
-        Le Cavern Club (live music)
-
-        Bit more fancy bars:
-
-        Le duc des Lombards
-
-        Le grand bleu
-
-        Les chandles
-
-        Gravity bar
-
-        Experimental cocktail bar
-
-
-        <h3>Speakeasies:</h3>
-
-        Mabel
-
-        Le ballroom du beefclub
-
-        Le syndicat
-
-        Gentlemen 1919
-
-        Hammam Bar
-
-        Le lavomatic
-
-        Le mezcaleria
-
-        No entry
-
-        Secret 8 by bar buddha
-    </p>
     <hr>
     <footer>
         <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
         <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+        <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
     </footer>
 </body>
 

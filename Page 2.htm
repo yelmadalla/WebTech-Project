@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="Travel, Babson, HEC, Paris, France, Business, Study, Eat, Drink, Club, Abroad, Trips, Europe, Prague, Milan">
     <title>Travels in Paris - HEC Paris</title>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
         body {
             background-color: #2b335c;
@@ -141,12 +146,53 @@
             border-spacing: 0;
         }
 
+        #ft {
+            color: #e88a60;
+        }
+
+        #ft:hover {
+            color: #5291df;
+        }
+
+        .info {
+            margin-left: 125px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        #intro {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 125px;
+            font-size: 22px;
+            color: whitesmoke;
+            text-align: center;
+            margin-left: 0;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
         hr {
             border: #e88a60 1px solid;
         }
 
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            font-style: italic;
+            color: #5291df;
+            margin-left: 100px;
+        }
+
+        #ile {
+            margin: auto;
+            text-align: center;
+        }
+
         footer {
             display: block;
+            text-align: center;
         }
 
         .footer-format .link-color {
@@ -160,20 +206,73 @@
             border-right: none;
         }
 
+        #unique {
+            height: 50px;
+            margin: auto;
+            background-color: #2b335c;
+            width: auto;
+            border: whitesmoke solid 1px;
+        }
+
+        #msg {
+            color: whitesmoke;
+            position: absolute;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: auto;
+            font-style: italic;
+        }
+
+        .footer-format:hover,
+        .link-color:hover {
+            color: #5291df;
+        }
+
         .footer-format {
-            text-transform: capitalize;
             font-weight: 200;
             font-size: 16px;
-            float: left;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             box-sizing: border-box;
             border: 1px solid transparent;
             height: 34px;
+            display: inline-block;
         }
     </style>
+    <script type="text/javascript">
+        const hec = [
+            "HEC Paris",
+            "No. 1 Business School in Europe in 2019",
+            "Ranked by the Financial Times",
+        ];
+
+        let p = 400;
+        let i = 0;
+        function doScroll() {
+            let x = document.getElementById("msg");
+            x.innerHTML = hec[i];
+            x.style.left = p + "px"
+            if (p > 700) {
+                p = 400;
+                i++;
+                if (i == hec.length) {
+                    i = 0;
+                }
+            }
+            else {
+                p = p + 1;
+            }
+            setTimeout("doScroll()", 10);
+        }
+        $(function () {
+
+            $("h2").click(function () {
+                $("p#intro").toggle();
+            });
+        });
+    </script>
+    <!-- added a JQuery to toggle the first part of the page -->
 </head>
 
-<body>
+<body onload="doScroll()">
     <header class="style">
         <div class="header">
             <h1><a class="title" href="index.htm" title="TIP">Travels In Paris</a></h1>
@@ -197,21 +296,28 @@
                 </div>
             </div>
     </header>
+    <br>
+    <div id="unique">
+        <h2 id="msg">This text will move</h2>
+        <!-- Animated this text with JavaScript -->
+    </div>
+    <br>
     <div>
         <img id="sizing" src="Images/hec.jpg" title="HEC Campus" alt="Picture of HEC">
     </div>
-    <p>
+    <p id="intro">
         HEC Paris is an extremely prestigious business school in France and one of the top 10 business schools in
-        Europe. It's a graduate school that offers Masters in Business, however, as they
-        go through a different academic system in France, as Babson undergraduate students we are allowed to attend
-        those classes.
+        Europe. In the most recent <a id="ft"
+            href="https://www.ft.com/content/ffb526e2-183d-11ea-8d73-6303645ac406">Financial
+            Times</a> ranking, HEC has surpassed others as the #1 Business School in Europe. It's a graduate school that
+        offers a Masters in Business.
     </p>
     <h2>Where should I live?</h2>
-    <p>The best option for students studying at HEC would be to live at ECLA.
+    <p class="info">The best option for students studying at HEC would be to live at ECLA.
         It's a residence in Massy Palaiseau, about a 45 minute train ride, or 15 minute car ride from HEC.
         The map below shows the exact location of ECLA, in Massy-Palaiseau, as compared to the HEC Campus in
         Jouy-en-Josas.
-        <div>
+        <div id="ile">
             <map name="Ile-de-France">
                 <area class="outline" shape="rect" coords="191,179,251,229" href="https://www.ecla-campus.com/en/"
                     alt="Massy Palaiseau" title="Ecla Campus" target="_blank" />
@@ -221,26 +327,37 @@
             </map>
             <img src="Images/Massy.png" usemap="#Ile-de-France" alt="Map of Ile-de-France" title="Clickable Map" />
         </div>
+        <!-- I've included two hotspots on the map above -->
 
         <h2>Where are the ammenities around me?</h2>
-        <p>Massy Palaiseau is a great town to live in. It's fairly new and has lots of supermarkets, cafes, movie
+        <p class="info">Massy Palaiseau is a great town to live in. It's fairly new and has lots of supermarkets, cafes,
+            movie
             theatres,
             and more entertainment nearby.
-            Everything is walking distance which is optimal when not having a dining hall or to hang out with friends
+            Everything is walking distance which is optimal when not having a dining hall and to hang out with friends
             from
             abroad.
         </p>
 
         <h2>What courses should I take?</h2>
-        <p>Babson allows us to take many valuable courses at HEC, whilst the program is pass/fail the classes HEC offers
+        <p class="info">Babson allows us to take many valuable courses at HEC, whilst the program is pass/fail the
+            classes HEC offers
             are extremely interesting and are different
             than ones at Babson College. If you're interested in anything luxury or fashion related, then HEC has many
             business classes to offer in those areas that count for Babson credits too.
+        </p>
+
+        <h2>How tough are the courses?</h2>
+        <p class="info">With regards to HEC courses they are very similar to Babson courses in the way they are taught
+            and evaluated. The class sizes are fairly small, reaching a maximum of 40 students for the foundation
+            courses, thus participation and attendance is evaluated. Additionally, there are a lot of group projects as
+            compared to individual work just like at Babson.
         </p>
         <hr>
         <footer>
             <p class="footer-format"><a class="link-color" href="Sitemap.htm" target="_blank">Site Map</a></p>
             <p class="footer-format"><a class="link-color" href="contact.htm" target="_blank">Contact</a></p>
+            <p class="footer-format"><a class="link-color" href="credits.htm" target="_blank">Credits</a></p>
         </footer>
 </body>
 
